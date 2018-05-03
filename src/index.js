@@ -30,7 +30,7 @@ VueCollapse.install = function (Vue, options) {
 
         // assigning css classes from settings
 
-        bind: (el, binding, vnode, oldVnode) {
+        bind: function (el, binding, vnode, oldVnode) {
             vnode.elm.classList.add(vnode.context.$options.$vc.settings.contentClassDefault);
         }
     });
@@ -41,13 +41,13 @@ VueCollapse.install = function (Vue, options) {
 
         // adding toggle class
 
-        bind: (el, binding, vnode, oldVnode) {
+        bind: function (el, binding, vnode, oldVnode) {
             vnode.elm.classList.add(vnode.context.$options.$vc.settings.togglerClassDefault);
         },
 
         // Creating custom toggler handler
 
-        inserted: (el, binding, vnode, oldVnode) {
+        inserted: function (el, binding, vnode, oldVnode) {
             if (binding.value != null) {
                 vnode.elm.addEventListener('click', function () {
                     vnode.context.$refs[binding.value].status = !vnode.context.$refs[binding.value].status;
