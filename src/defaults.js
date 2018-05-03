@@ -25,8 +25,8 @@ const openElement = function (target, config) {
 };
 
 module.exports={
-    defaults,
-    toggleElement,
-    closeElement,
-    openElement,
+    defaults: defaults,
+    toggleElement: toggleElement,
+    closeElement: closeElement,
+    openElement: openElement,
 };
