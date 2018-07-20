@@ -1,5 +1,5 @@
 <template>
-    <div :class="'vc-' + $options.$vc.settings.basename + ' open-is' + $data.status">
+    <div :class="'vc-' + $options.$vc.settings.basename + ($data.status ? ' toggled' : ' not-toggled')">
         <slot></slot>
     </div>
 </template>
